@@ -1,0 +1,23 @@
+app:
+  jwtSecret: teststs
+  jwtExpirationInMs: 86400
+  upload:
+    path: files
+spring:
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 10MB
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQL92Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 99
+server:
+  port: 8083
